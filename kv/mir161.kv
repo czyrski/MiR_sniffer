@@ -1,11 +1,14 @@
 <Mir161>:
     name: 'mir161'
+
     GridLayout:
         cols: 2
-        FloatLayout:
+        BoxLayout:
 
         StackLayout:
+            orientation: 'bt-rl'
             Button:
                 id: main
                 text: 'main'
+                size_hint: (0.6, 0.15)
                 on_release: app.root.current = 'mainscreen'
