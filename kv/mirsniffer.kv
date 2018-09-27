@@ -1,5 +1,11 @@
-#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import CardTransition kivy.uix.screenmanager.CardTransition
 <MirSniffer>:
-    transition: FadeTransition()
+    canvas.before:
+        Color:
+            rgba: 125,125,125,0.6
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    transition: CardTransition()
     MainScreen:
     Mir161:
