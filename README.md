@@ -9,7 +9,7 @@ MiR 200 is an AGV robot. AGV (Automated Guided Vehicle) is a mobile, autonomous 
 You will find more in the following link: 
 https://www.mobile-industrial-robots.com/en/
 
-## Pictures
+## Video and pictures
 
 ![Alt text](https://raw.githubusercontent.com/czyrski/MiR_sniffer/master/Pics/Main%20menu.png)
  
