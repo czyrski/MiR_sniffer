@@ -11,6 +11,8 @@ https://www.mobile-industrial-robots.com/en/
 
 ## Video and pictures
 
+Please find attached example video in project main folder.
+
 ![Alt text](https://raw.githubusercontent.com/czyrski/MiR_sniffer/master/Pics/Main%20menu.png)
  
 ![Alt text](https://raw.githubusercontent.com/czyrski/MiR_sniffer/master/Pics/Robot%20screen.png)
