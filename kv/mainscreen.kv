@@ -1,14 +1,81 @@
 <MainScreen>:
     name: 'mainscreen'
-
     GridLayout:
         cols: 2
-        BoxLayout:
-
+        FloatLayout:
+            Image:
+                size_hint: (0.7, 0.4)
+                pos_hint: {'x':0, 'y':.6}
+                source: 'misc/mir-200.png'
+            Label:
+                text_size: self.size
+                text: 'MiR Sniffer'
+                font_size: 80
+                pos: (0, 30)
+            Label:
+                text_size: self.size
+                text: ' Igor Czyrski \n github.com/czyrski'
+                font_size: 20
+                pos_hint: {'x':0, 'y':0}
         StackLayout:
             orientation: 'bt-rl'
             Button:
+                id: mir327
+                halign: 'left'
+                valign: 'middle'
+                font_size: 20
+                text_size: self.size
+                text: ' MiR_S327\n'+' State: '+root.status_robots[5]
+                color: root.buttons_color[5]
+                size_hint: (0.6, 0.10)
+                on_release: app.root.current = 'mir327'
+            Button:
+                id: mir326
+                halign: 'left'
+                valign: 'middle'
+                font_size: 20
+                text_size: self.size
+                color: root.buttons_color[4]
+                text: ' MiR_S326\n'+' State: '+root.status_robots[4]
+                size_hint: (0.6, 0.10)
+                on_release: app.root.current = 'mir326'
+            Button:
+                id: mir325
+                halign: 'left'
+                valign: 'middle'
+                font_size: 20
+                text_size: self.size
+                text: ' MiR_S325\n'+' State: '+root.status_robots[3]
+                color: root.buttons_color[3]
+                size_hint: (0.6, 0.10)
+                on_release: app.root.current = 'mir325'
+            Button:
+                id: mir319
+                halign: 'left'
+                valign: 'middle'
+                font_size: 20
+                text_size: self.size
+                text: ' MiR_S319\n'+' State: '+root.status_robots[2]
+                color: root.buttons_color[2]
+                size_hint: (0.6, 0.10)
+                on_release: app.root.current = 'mir319'
+            Button:
+                id: mir162
+                halign: 'left'
+                valign: 'middle'
+                font_size: 20
+                text_size: self.size
+                text: ' MiR_S162\n'+' State: '+root.status_robots[1]
+                color: root.buttons_color[1]
+                size_hint: (0.6, 0.10)
+                on_release: app.root.current = 'mir162'
+            Button:
                 id: mir161
-                text: root.status_mir161
-                size_hint: (0.6, 0.15)
+                halign: 'left'
+                valign: 'middle'
+                font_size: 20
+                text_size: self.size
+                text: ' MiR_S161\n'+' State: '+root.status_robots[0]
+                color: root.buttons_color[0]
+                size_hint: (0.6, 0.10)
                 on_release: app.root.current = 'mir161'
