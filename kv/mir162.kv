@@ -1,0 +1,120 @@
+<Mir162>:
+    name: 'mir162'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'vertical'
+            Image:
+                size_hint: (0.2, 0.3)
+                pos_hint: {'x':.05, 'y':1}
+                source: 'misc/mir-200.png'
+            Label:
+                size_hint_y: 0.7
+            GridLayout:
+                spacing: 5
+                cols: 6
+                rows: 3
+                Label:
+                    size_hint: (0.1, 0.3)
+                Label:
+                    size_hint: (0.2, 0.3)
+                    canvas.before:
+                        Color:
+                            rgba: 0,0,0,0.35
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text: 'PLC Reg 101'
+                Label:
+                    size_hint: (0.2, 0.3)
+                    canvas.before:
+                        Color:
+                            rgba: 0,0,0,0.35
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text: 'PLC Reg 102'
+                Label:
+                    size_hint: (0.2, 0.3)
+                    canvas.before:
+                        Color:
+                            rgba: 0,0,0,0.35
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text: 'PLC Reg 103'
+                Label:
+                    size_hint: (0.2, 0.3)
+                    canvas.before:
+                        Color:
+                            rgba: 0,0,0,0.35
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text: 'PLC Reg 104'
+                Label:
+                    size_hint: (0.1, 0.3)
+                Label:
+                    size_hint: (0.1, 0.3)
+                Button:
+                    background_color: root.button_colors[0]
+                    size_hint: (0.2,0.4)
+                    text: root.register[0]
+                    on_release: root.set_register('101')
+                    on_release: root.change_button_color('101')
+                Button:
+                    background_color: root.button_colors[1]
+                    size_hint: (0.2,0.4)
+                    text: root.register[1]
+                    on_release: root.set_register('102')
+                    on_release: root.change_button_color('102')
+                Button:
+                    background_color: root.button_colors[2]
+                    size_hint: (0.2,0.4)
+                    text: root.register[2]
+                    on_release: root.set_register('103')
+                    on_release: root.change_button_color('103')
+                Button:
+                    background_color: root.button_colors[3]
+                    size_hint: (0.2,0.4)
+                    text: root.register[3]
+                    on_release: root.set_register('104')
+                    on_release: root.change_button_color('104')
+                Label:
+                    size_hint: (0.1, 0.3)
+                Label:
+                    size_hint: (0.1, 0.3)
+                Label:
+                    size_hint: (0.2, 0.3)
+                Label:
+                    size_hint: (0.2, 0.3)
+                Label:
+                    size_hint: (0.2, 0.3)
+                Label:
+                    size_hint: (0.2, 0.3)
+                Label:
+                    size_hint: (0.1, 0.3)
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: (.7, 1)
+            Button:
+                size_hint: (.35, .05)
+                pos_hint: {'x': 0.65, 'y':0.95}
+                text: 'Back to menu'
+                on_release: app.root.current = 'mainscreen'
+            Label:
+                size_hint: (None, 0.2)
+            Label:
+                canvas.before:
+                    Color:
+                        rgba: 0,0,0,0.35
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                size_hint: (1, 0.5)
+                font_size: 25
+                text_size: self.size
+                halign: 'center'
+                valign: 'middle'
+                text: ' Robot name: MiR S162\n Robot IP: '+root.robot_ip+'\n Robot status: '+root.robot_status+'\n Battery percentage: '+root.battery_per+'\n Battery time: '+root.battery_time+'\n Error description: '+root.error_description+'\n Mission text: '+root.mission_text+'\n Mission ID: '+root.mission_id
